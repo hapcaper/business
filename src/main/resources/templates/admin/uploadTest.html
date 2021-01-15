@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- bootstrap 4.x is supported. You can also use the bootstrap css 3.3.x versions -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-fileinput/5.1.3/css/fileinput.min.css" rel="stylesheet">
+    <!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
+    <!-- link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.3/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css" /-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- piexif.min.js is needed for auto orienting image files OR when restoring exif data in resized images and when you
+        wish to resize images before upload. This must be loaded before fileinput.min.js -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/piexifjs/2.0.0-beta.9/piexif.min.js"></script>
+    <!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview.
+        This must be loaded before fileinput.min.js -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/Sortable/1.11.2-alpha.3/Sortable.min.js"></script>
+    <!-- popper.min.js below is needed if you use bootstrap 4.x. You can also use the bootstrap js
+       3.3.x versions without popper.min.js. -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.6.0/cjs/popper.min.js"></script>
+    <!-- bootstrap.min.js below is needed if you wish to zoom and preview file content in a detail modal
+        dialog. bootstrap 4.x is supported. You can also use the bootstrap js 3.3.x versions. -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <!-- the main fileinput plugin file -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-fileinput/5.1.3/js/fileinput.min.js"></script>
+    <!-- optionally if you need a theme like font awesome theme you can include it as mentioned below -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-fileinput/5.1.3/themes/explorer-fa/theme.js"></script>
+    <!-- optionally if you need translation for your language then include  locale file as mentioned below -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-fileinput/5.1.3/js/locales/zh.min.js"></script>
+
+</head>
+<body>
+<form action="/fileUpload" method="post" enctype="multipart/form-data">
+    <label>上传图片</label>
+    <input type="file" name="file"/>
+    <input type="submit" value="上传"/>
+    <input id="input-id" type="file" class="file" data-preview-file-type="text" >
+</form>
+<p>图片:</p>
+</body>
+<script>
+    // initialize with defaults
+    $("#input-id").fileinput();
+
+    // with plugin options
+    $("#input-id").fileinput({'showUpload':false, 'previewFileType':'any'});
+
+</script>
+</html>

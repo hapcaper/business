@@ -1,718 +1,295 @@
 <!DOCTYPE html>
-<!-- Template Name: Clip-One - Responsive Admin Template build with Twitter Bootstrap 3.x Version: 1.3 Author: ClipTheme -->
-<!--[if IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
-<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
-<!--[if !IE]><!-->
-<html xmlns:th="http://www.thymeleaf.org">
-	<!--<![endif]-->
-	<!-- start: HEAD -->
-	<head>
-		<title>Clip-One - Responsive Admin Template</title>
-		<!-- start: META -->
-		<meta charset="utf-8" />
-		<!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<meta content="" name="description" />
-		<meta content="" name="author" />
-		<!-- end: META -->
-		<!-- start: MAIN CSS -->
-		<link rel="stylesheet" th:href="@{/assets/plugins/bootstrap/css/bootstrap.min.css}" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../assets/fonts/style.css">
-		<link rel="stylesheet" href="../assets/css/main.css">
-		<link rel="stylesheet" href="../assets/css/main-responsive.css">
-		<link rel="stylesheet" href="../assets/plugins/iCheck/skins/all.css">
-		<link rel="stylesheet" href="../assets/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css">
-		<link rel="stylesheet" href="../assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
-		<link rel="stylesheet" href="../assets/css/theme_light.css" type="text/css" id="skin_color">
-		<link rel="stylesheet" href="../assets/css/print.css" type="text/css" media="print"/>
-		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-<!--		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
-		<!-- bootstrap 4.x is supported. You can also use the bootstrap css 3.3.x versions -->
-<!--		<link type="text/css" rel="stylesheet" href="../assets/kartik-v-bootstrap-fileinput-be14321/css/fileinput.css" />-->
-<!--		<script type="text/javascript" src="../assets/kartik-v-bootstrap-fileinput-be14321/js/fileinput.js"></script>-->
-<!--		<script type="text/javascript" src="../assets/kartik-v-bootstrap-fileinput-be14321/js/locales/zh.js"></script>-->
-<!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-<!--		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.3/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />-->
-		<!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
-		<!-- link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.3/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css" /-->
-<!--		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
-		<!-- piexif.min.js is needed for auto orienting image files OR when restoring exif data in resized images and when you
-            wish to resize images before upload. This must be loaded before fileinput.min.js -->
-<!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.3/js/plugins/piexif.min.js" type="text/javascript"></script>-->
-		<!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview.
-            This must be loaded before fileinput.min.js -->
-<!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.3/js/plugins/sortable.min.js" type="text/javascript"></script>-->
-		<!-- popper.min.js below is needed if you use bootstrap 4.x. You can also use the bootstrap js
-           3.3.x versions without popper.min.js. -->
-<!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
-		<!-- bootstrap.min.js below is needed if you wish to zoom and preview file content in a detail modal
-            dialog. bootstrap 4.x is supported. You can also use the bootstrap js 3.3.x versions. -->
-<!--		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script>-->
-		<!-- the main fileinput plugin file -->
-<!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.3/js/fileinput.min.js"></script>-->
-		<!-- optionally if you need a theme like font awesome theme you can include it as mentioned below -->
-<!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.3/themes/fa/theme.js"></script>-->
-		<!-- optionally if you need translation for your language then include  locale file as mentioned below -->
-<!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.3/js/locales/(lang).js"></script>-->
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!--<![endif]-->
+<!-- start: HEAD -->
+<head>
+    <title>Clip-One - Responsive Admin Template</title>
+    <!-- start: META -->
+    <div th:replace="fragments::common_css">
+        <link rel="stylesheet" href="../../static/assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../static/assets/fonts/style.css">
+        <link rel="stylesheet" href="../../static/assets/css/main.css">
+        <link rel="stylesheet" href="../../static/assets/css/main-responsive.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/iCheck/skins/all.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
+        <link rel="stylesheet" href="../../static/assets/css/theme_light.css" type="text/css" id="skin_color">
+        <link rel="stylesheet" href="../../static/assets/css/print.css" type="text/css" media="print"/>
 
-		<!-- end: MAIN CSS -->
-		<!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
-		<link rel="stylesheet" href="../assets/plugins/jQuery-File-Upload/css/jquery.fileupload-ui.css">
-		<!-- CSS adjustments for browsers with JavaScript disabled -->
-		<noscript>
-			<link rel="stylesheet" href="../assets/plugins/jQuery-File-Upload/css/jquery.fileupload-ui-noscript.css">
-		</noscript>
-		<!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
-		<link rel="shortcut icon" href="favicon.ico" />
-	</head>
-	<!-- end: HEAD -->
-	<!-- start: BODY -->
-	<body>
-		<!-- start: HEADER -->
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<!-- start: TOP NAVIGATION CONTAINER -->
-<!--			<div class="container">-->
-<!--				<div class="navbar-header">-->
-<!--					&lt;!&ndash; start: RESPONSIVE MENU TOGGLER &ndash;&gt;-->
-<!--					<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">-->
-<!--						<span class="clip-list-2"></span>-->
-<!--					</button>-->
-<!--					&lt;!&ndash; end: RESPONSIVE MENU TOGGLER &ndash;&gt;-->
-<!--					&lt;!&ndash; start: LOGO &ndash;&gt;-->
-<!--					<a class="navbar-brand" href="index.html">-->
-<!--						CLIP<i class="clip-clip"></i>ONE-->
-<!--					</a>-->
-<!--					&lt;!&ndash; end: LOGO &ndash;&gt;-->
-<!--				</div>-->
-<!--				<div class="navbar-tools">-->
-<!--					&lt;!&ndash; start: TOP NAVIGATION MENU &ndash;&gt;-->
-<!--					<ul class="nav navbar-right">-->
-<!--						&lt;!&ndash; start: TO-DO DROPDOWN &ndash;&gt;-->
-<!--						<li class="dropdown">-->
-<!--							<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">-->
-<!--								<i class="clip-list-5"></i>-->
-<!--								<span class="badge"> 12</span>-->
-<!--							</a>-->
-<!--							<ul class="dropdown-menu todo">-->
-<!--								<li>-->
-<!--									<span class="dropdown-menu-title"> You have 12 pending tasks</span>-->
-<!--								</li>-->
-<!--								<li>-->
-<!--									<div class="drop-down-wrapper">-->
-<!--										<ul>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc" style="opacity: 1; text-decoration: none;">Staff Meeting</span>-->
-<!--													<span class="label label-danger" style="opacity: 1;"> today</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc" style="opacity: 1; text-decoration: none;"> New frontend layout</span>-->
-<!--													<span class="label label-danger" style="opacity: 1;"> today</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc"> Hire developers</span>-->
-<!--													<span class="label label-warning"> tommorow</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc">Staff Meeting</span>-->
-<!--													<span class="label label-warning"> tommorow</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc"> New frontend layout</span>-->
-<!--													<span class="label label-success"> this week</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc"> Hire developers</span>-->
-<!--													<span class="label label-success"> this week</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc"> New frontend layout</span>-->
-<!--													<span class="label label-info"> this month</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc"> Hire developers</span>-->
-<!--													<span class="label label-info"> this month</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc" style="opacity: 1; text-decoration: none;">Staff Meeting</span>-->
-<!--													<span class="label label-danger" style="opacity: 1;"> today</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc" style="opacity: 1; text-decoration: none;"> New frontend layout</span>-->
-<!--													<span class="label label-danger" style="opacity: 1;"> today</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a class="todo-actions" href="javascript:void(0)">-->
-<!--													<i class="fa fa-square-o"></i>-->
-<!--													<span class="desc"> Hire developers</span>-->
-<!--													<span class="label label-warning"> tommorow</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--										</ul>-->
-<!--									</div>-->
-<!--								</li>-->
-<!--								<li class="view-all">-->
-<!--									<a href="javascript:void(0)">-->
-<!--										See all tasks <i class="fa fa-arrow-circle-o-right"></i>-->
-<!--									</a>-->
-<!--								</li>-->
-<!--							</ul>-->
-<!--						</li>-->
-<!--						&lt;!&ndash; end: TO-DO DROPDOWN&ndash;&gt;-->
-<!--						&lt;!&ndash; start: NOTIFICATION DROPDOWN &ndash;&gt;-->
-<!--						<li class="dropdown">-->
-<!--							<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">-->
-<!--								<i class="clip-notification-2"></i>-->
-<!--								<span class="badge"> 11</span>-->
-<!--							</a>-->
-<!--							<ul class="dropdown-menu notifications">-->
-<!--								<li>-->
-<!--									<span class="dropdown-menu-title"> You have 11 notifications</span>-->
-<!--								</li>-->
-<!--								<li>-->
-<!--									<div class="drop-down-wrapper">-->
-<!--										<ul>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-primary"><i class="fa fa-user"></i></span>-->
-<!--													<span class="message"> New user registration</span>-->
-<!--													<span class="time"> 1 min</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-success"><i class="fa fa-comment"></i></span>-->
-<!--													<span class="message"> New comment</span>-->
-<!--													<span class="time"> 7 min</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-success"><i class="fa fa-comment"></i></span>-->
-<!--													<span class="message"> New comment</span>-->
-<!--													<span class="time"> 8 min</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-success"><i class="fa fa-comment"></i></span>-->
-<!--													<span class="message"> New comment</span>-->
-<!--													<span class="time"> 16 min</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-primary"><i class="fa fa-user"></i></span>-->
-<!--													<span class="message"> New user registration</span>-->
-<!--													<span class="time"> 36 min</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-warning"><i class="fa fa-shopping-cart"></i></span>-->
-<!--													<span class="message"> 2 items sold</span>-->
-<!--													<span class="time"> 1 hour</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li class="warning">-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-danger"><i class="fa fa-user"></i></span>-->
-<!--													<span class="message"> User deleted account</span>-->
-<!--													<span class="time"> 2 hour</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li class="warning">-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-danger"><i class="fa fa-shopping-cart"></i></span>-->
-<!--													<span class="message"> Transaction was canceled</span>-->
-<!--													<span class="time"> 6 hour</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-success"><i class="fa fa-comment"></i></span>-->
-<!--													<span class="message"> New comment</span>-->
-<!--													<span class="time"> yesterday</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-primary"><i class="fa fa-user"></i></span>-->
-<!--													<span class="message"> New user registration</span>-->
-<!--													<span class="time"> yesterday</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-primary"><i class="fa fa-user"></i></span>-->
-<!--													<span class="message"> New user registration</span>-->
-<!--													<span class="time"> yesterday</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-success"><i class="fa fa-comment"></i></span>-->
-<!--													<span class="message"> New comment</span>-->
-<!--													<span class="time"> yesterday</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:void(0)">-->
-<!--													<span class="label label-success"><i class="fa fa-comment"></i></span>-->
-<!--													<span class="message"> New comment</span>-->
-<!--													<span class="time"> yesterday</span>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--										</ul>-->
-<!--									</div>-->
-<!--								</li>-->
-<!--								<li class="view-all">-->
-<!--									<a href="javascript:void(0)">-->
-<!--										See all notifications <i class="fa fa-arrow-circle-o-right"></i>-->
-<!--									</a>-->
-<!--								</li>-->
-<!--							</ul>-->
-<!--						</li>-->
-<!--						&lt;!&ndash; end: NOTIFICATION DROPDOWN &ndash;&gt;-->
-<!--						&lt;!&ndash; start: MESSAGE DROPDOWN &ndash;&gt;-->
-<!--						<li class="dropdown">-->
-<!--							<a class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown" href="#">-->
-<!--								<i class="clip-bubble-3"></i>-->
-<!--								<span class="badge"> 9</span>-->
-<!--							</a>-->
-<!--							<ul class="dropdown-menu posts">-->
-<!--								<li>-->
-<!--									<span class="dropdown-menu-title"> You have 9 messages</span>-->
-<!--								</li>-->
-<!--								<li>-->
-<!--									<div class="drop-down-wrapper">-->
-<!--										<ul>-->
-<!--											<li>-->
-<!--												<a href="javascript:;">-->
-<!--													<div class="clearfix">-->
-<!--														<div class="thread-image">-->
-<!--															<img alt="" src="./assets/images/avatar-2.jpg">-->
-<!--														</div>-->
-<!--														<div class="thread-content">-->
-<!--															<span class="author">Nicole Bell</span>-->
-<!--															<span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>-->
-<!--															<span class="time"> Just Now</span>-->
-<!--														</div>-->
-<!--													</div>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:;">-->
-<!--													<div class="clearfix">-->
-<!--														<div class="thread-image">-->
-<!--															<img alt="" src="./assets/images/avatar-1.jpg">-->
-<!--														</div>-->
-<!--														<div class="thread-content">-->
-<!--															<span class="author">Peter Clark</span>-->
-<!--															<span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>-->
-<!--															<span class="time">2 mins</span>-->
-<!--														</div>-->
-<!--													</div>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:;">-->
-<!--													<div class="clearfix">-->
-<!--														<div class="thread-image">-->
-<!--															<img alt="" src="./assets/images/avatar-3.jpg">-->
-<!--														</div>-->
-<!--														<div class="thread-content">-->
-<!--															<span class="author">Steven Thompson</span>-->
-<!--															<span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>-->
-<!--															<span class="time">8 hrs</span>-->
-<!--														</div>-->
-<!--													</div>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:;">-->
-<!--													<div class="clearfix">-->
-<!--														<div class="thread-image">-->
-<!--															<img alt="" src="./assets/images/avatar-1.jpg">-->
-<!--														</div>-->
-<!--														<div class="thread-content">-->
-<!--															<span class="author">Peter Clark</span>-->
-<!--															<span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>-->
-<!--															<span class="time">9 hrs</span>-->
-<!--														</div>-->
-<!--													</div>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--											<li>-->
-<!--												<a href="javascript:;">-->
-<!--													<div class="clearfix">-->
-<!--														<div class="thread-image">-->
-<!--															<img alt="" src="./assets/images/avatar-5.jpg">-->
-<!--														</div>-->
-<!--														<div class="thread-content">-->
-<!--															<span class="author">Kenneth Ross</span>-->
-<!--															<span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>-->
-<!--															<span class="time">14 hrs</span>-->
-<!--														</div>-->
-<!--													</div>-->
-<!--												</a>-->
-<!--											</li>-->
-<!--										</ul>-->
-<!--									</div>-->
-<!--								</li>-->
-<!--								<li class="view-all">-->
-<!--									<a href="pages_messages.html">-->
-<!--										See all messages <i class="fa fa-arrow-circle-o-right"></i>-->
-<!--									</a>-->
-<!--								</li>-->
-<!--							</ul>-->
-<!--						</li>-->
-<!--						&lt;!&ndash; end: MESSAGE DROPDOWN &ndash;&gt;-->
-<!--						&lt;!&ndash; start: USER DROPDOWN &ndash;&gt;-->
-<!--						<li class="dropdown current-user">-->
-<!--							<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">-->
-<!--								<img src="assets/images/avatar-1-small.jpg" class="circle-img" alt="">-->
-<!--								<span class="username">Peter Clark</span>-->
-<!--								<i class="clip-chevron-down"></i>-->
-<!--							</a>-->
-<!--							<ul class="dropdown-menu">-->
-<!--								<li>-->
-<!--									<a href="pages_user_profile.html">-->
-<!--										<i class="clip-user-2"></i>-->
-<!--										&nbsp;My Profile-->
-<!--									</a>-->
-<!--								</li>-->
-<!--								<li>-->
-<!--									<a href="pages_calendar.html">-->
-<!--										<i class="clip-calendar"></i>-->
-<!--										&nbsp;My Calendar-->
-<!--									</a>-->
-<!--								<li>-->
-<!--									<a href="pages_messages.html">-->
-<!--										<i class="clip-bubble-4"></i>-->
-<!--										&nbsp;My Messages (3)-->
-<!--									</a>-->
-<!--								</li>-->
-<!--								<li class="divider"></li>-->
-<!--								<li>-->
-<!--									<a href="utility_lock_screen.html"><i class="clip-locked"></i>-->
-<!--										&nbsp;Lock Screen </a>-->
-<!--								</li>-->
-<!--								<li>-->
-<!--									<a href="login_example1.html">-->
-<!--										<i class="clip-exit"></i>-->
-<!--										&nbsp;Log Out-->
-<!--									</a>-->
-<!--								</li>-->
-<!--							</ul>-->
-<!--						</li>-->
-<!--						&lt;!&ndash; end: USER DROPDOWN &ndash;&gt;-->
-<!--					</ul>-->
-<!--					&lt;!&ndash; end: TOP NAVIGATION MENU &ndash;&gt;-->
-<!--				</div>-->
-<!--			</div>-->
-			<!-- end: TOP NAVIGATION CONTAINER -->
-		</div>
-		<!-- end: HEADER -->
-		<!-- start: MAIN CONTAINER -->
-		<div class="main-container">
-			<div class="navbar-content">
-				<!-- start: SIDEBAR -->
-				<div class="main-navigation navbar-collapse collapse">
-					<!-- start: MAIN MENU TOGGLER BUTTON -->
-					<div class="navigation-toggler">
-						<i class="clip-chevron-left"></i>
-						<i class="clip-chevron-right"></i>
-					</div>
-					<!-- end: MAIN MENU TOGGLER BUTTON -->
-					<!-- start: MAIN NAVIGATION MENU -->
-					<ul class="main-navigation-menu">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../../static/assets/plugins/font-awesome/css/font-awesome-ie7.min.css">
+        <![endif]-->
+        <!-- end: MAIN CSS -->
 
-						<li th:for="">
-							<a href="index.html"><i class="clip-home-3"></i>
-								<span class="title"> Dashboard </span><span class="selected"></span>
-							</a>
-						</li>
+        <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
 
-					</ul>
-					<!-- end: MAIN NAVIGATION MENU -->
-				</div>
-				<!-- end: SIDEBAR -->
-			</div>
-			<!-- start: PAGE -->
-			<div class="main-content">
-				<!-- start: PANEL CONFIGURATION MODAL FORM -->
-				<div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-									&times;
-								</button>
-								<h4 class="modal-title">Panel Configuration</h4>
-							</div>
-							<div class="modal-body">
-								Here will be a configuration form
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">
-									Close
-								</button>
-								<button type="button" class="btn btn-primary">
-									Save changes
-								</button>
-							</div>
-						</div>
-						<!-- /.modal-content -->
-					</div>
-					<!-- /.modal-dialog -->
-				</div>
-				<!-- /.modal -->
-				<!-- end: SPANEL CONFIGURATION MODAL FORM -->
-				<div class="container">
-					<!-- start: PAGE HEADER -->
-					<div class="row">
-						<div class="col-sm-12">
-							<!-- start: PAGE TITLE & BREADCRUMB -->
-							<ol class="breadcrumb">
-								<li>
-									<i class="clip-pencil"></i>
-									<a href="#">
-										商品
-									</a>
-								</li>
-								<li class="active">
-									编辑商品
-								</li>
-							</ol>
-							<div class="page-header">
-								<h1>编辑商品</h1>
-							</div>
-							<!-- end: PAGE TITLE & BREADCRUMB -->
-						</div>
-					</div>
-					<!-- end: PAGE HEADER -->
-					<!-- start: PAGE CONTENT -->
-					<div class="row">
-						<div class="col-md-12">
+        <link rel="stylesheet" href="../../static/assets/plugins/select2/select2.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/datepicker/css/datepicker.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/jQuery-Tags-Input/jquery.tagsinput.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/summernote/build/summernote.css">
+        <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+    </div>
+</head>
 
-							<form role="form" action="#" th:action="@{/item/add}" class="form-horizontal" method="post">
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="form-field-1">
-										商品名称
-									</label>
-									<div class="col-sm-9">
-										<input name="name" type="text" id="form-field-1" class="form-control">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="form-field-2">
-										商品分类
-									</label>
-									<div class="col-sm-9">
-										<input name="type" type="text" id="form-field-2" class="form-control">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">
-										参考价格
-									</label>
-									<div class="col-sm-9">
-										<input name="price" type="text" class="form-control">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">
-										排序
-									</label>
-									<div class="col-sm-9">
-										<input name="order" type="number" class="form-control">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">
-										轮播图
-									</label>
-									<div class="col-sm-9">
-										<input name="showPicList" type="file" multiple="multiple" class="form-control">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">
-										商品描述
-									</label>
-									<div class="col-sm-9">
-										<textarea name="desc" id="form-field-22" class="form-control" style="margin: 0px -11px 0px 0px; height: 78px; width: 718px;"></textarea>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label">
-										详情图
-									</label>
-									<div class="col-sm-9">
-										<input name="descPicList" type="file" multiple="multiple" class="form-control">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-2 col-sm-offset-8">
-										<button type="submit" class="btn btn-success finish-step btn-block">
-											提交 <i class="fa fa-arrow-circle-right"></i>
-										</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-					<!-- end: PAGE CONTENT-->
-				</div>
-			</div>
-			<!-- end: PAGE -->
-		</div>
-		<!-- end: MAIN CONTAINER -->
-		<!-- start: FOOTER -->
-		<div class="footer clearfix">
-			<div class="footer-inner">
-				2014 &copy; clip-one by cliptheme.
-			</div>
-			<div class="footer-items">
-				<span class="go-top"><i class="clip-chevron-up"></i></span>
-			</div>
-		</div>
-		<!-- end: FOOTER -->
-		<!-- start: MAIN JAVASCRIPTS -->
-		<script src="../assets/plugins/respond.min.js"></script>
-		<script src="../assets/plugins/excanvas.min.js"></script>
-<!--		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-		<script src="../assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
-		<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-		<script src="../assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
-		<script src="../assets/plugins/blockUI/jquery.blockUI.js"></script>
-		<script src="../assets/plugins/iCheck/jquery.icheck.min.js"></script>
-		<script src="../assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
-		<script src="../assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
-		<script src="../assets/plugins/less/less-1.5.0.min.js"></script>
-		<script src="../assets/plugins/jquery-cookie/jquery.cookie.js"></script>
-		<script src="../assets/plugins/bootstrap-colorpalette/js/bootstrap-colorpalette.js"></script>
-		<script src="../assets/js/main.js"></script>
-		<!-- end: MAIN JAVASCRIPTS -->
-		<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<!-- The basic File Upload plugin -->
-		<!-- The template to display files available for upload -->
-		<!-- The template to display files available for download -->
-		<script id="template-download" type="text/x-tmpl">
-			{% for (var i=0, file; file=o.files[i]; i++) { %}
-			<tr class="template-download fade">
-			<td>
-			<span class="preview">
-			{% if (file.thumbnailUrl) { %}
-			<a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
-			{% } %}
-			</span>
-			</td>
-			<td>
-			<p class="name">
-			{% if (file.url) { %}
-			<a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
-			{% } else { %}
-			<span>{%=file.name%}</span>
-			{% } %}
-			</p>
-			{% if (file.error) { %}
-			<div><span class="label label-danger">Error</span> {%=file.error%}</div>
-			{% } %}
-			</td>
-			<td>
-			<span class="size">{%=o.formatFileSize(file.size)%}</span>
-			</td>
-			<td>
-			{% if (file.deleteUrl) { %}
-			<button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
-			<i class="glyphicon glyphicon-trash"></i>
-			<span>Delete</span>
-			</button>
-			<input type="checkbox" name="delete" value="1" class="toggle">
-			{% } else { %}
-			<button class="btn btn-warning cancel">
-			<i class="glyphicon glyphicon-ban-circle"></i>
-			<span>Cancel</span>
-			</button>
-			{% } %}
-			</td>
-			</tr>
-			{% } %}
-		</script>
-		<script src="../assets/plugins/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
-		<!-- The Templates plugin is included to render the upload/download listings -->
-<!--		<script src="http://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>-->
-		<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-		<script src="../assets/JavaScript-Load-Image-master/js/load-image.js"></script>
-		<!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<!--		<script src="http://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>-->
-		<!-- blueimp Gallery script -->
-<!--		<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>-->
-		<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-		<script src="../assets/plugins/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
-		<!-- The basic File Upload plugin -->
-		<script src="../assets/plugins/jQuery-File-Upload/js/jquery.fileupload.js"></script>
-		<!-- The File Upload processing plugin -->
-		<script src="../assets/plugins/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
-		<!-- The File Upload image preview & resize plugin -->
-		<script src="../assets/plugins/jQuery-File-Upload/js/jquery.fileupload-image.js"></script>
-		<!-- The File Upload audio preview plugin -->
-		<script src="../assets/plugins/jQuery-File-Upload/js/jquery.fileupload-audio.js"></script>
-		<!-- The File Upload video preview plugin -->
-		<script src="../assets/plugins/jQuery-File-Upload/js/jquery.fileupload-video.js"></script>
-		<!-- The File Upload validation plugin -->
-		<script src="../assets/plugins/jQuery-File-Upload/js/jquery.fileupload-validate.js"></script>
-		<!-- The File Upload user interface plugin -->
-		<script src="../assets/plugins/jQuery-File-Upload/js/jquery.fileupload-ui.js"></script>
-		<!-- The main application script -->
-		<script src="../assets/plugins/jQuery-File-Upload/js/main.js"></script>
-		<!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
-		<!--[if (gte IE 8)&(lt IE 10)]>
-		<![endif]-->
-		<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<script>
-			jQuery(document).ready(function() {
-				Main.init();
-			});
-		</script>
-		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<!--		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
-	</body>
-	<!-- end: BODY -->
+<body>
+<!-- start: HEADER -->
+<div th:replace="fragments::header" class="navbar navbar-inverse navbar-fixed-top">
+    <!-- start: TOP NAVIGATION CONTAINER -->
+    <div class="container">
+        <div class="navbar-header">
+            <!-- start: RESPONSIVE MENU TOGGLER -->
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="clip-list-2"></span>
+            </button>
+            <!-- end: RESPONSIVE MENU TOGGLER -->
+            <!-- start: LOGO -->
+            <a class="navbar-brand" href="index.html">
+                竞赛管理
+            </a>
+            <!-- end: LOGO -->
+        </div>
+        <div class="navbar-tools">
+            <!-- start: TOP NAVIGATION MENU -->
+            <ul class="nav navbar-right">
+                <!-- start: USER DROPDOWN -->
+                <li class="dropdown current-user">
+                    <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true"
+                       href="#">
+                        <img src="assets/images/avatar-1-small.jpg" class="circle-img" alt="">
+                        <span class="username">Peter Clark</span>
+                        <i class="clip-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="pages_user_profile.html">
+                                <i class="clip-user-2"></i>
+                                &nbsp;个人信息
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login_example1.html">
+                                <i class="clip-exit"></i>
+                                &nbsp;登出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- end: USER DROPDOWN -->
+            </ul>
+            <!-- end: TOP NAVIGATION MENU -->
+        </div>
+    </div>
+    <!-- end: TOP NAVIGATION CONTAINER -->
+</div>
+
+<div class="main-container">
+    <div th:replace="fragments::left" class="navbar-content"></div>
+    <!-- start: PAGE -->
+    <div class="main-content">
+        <!-- start: PANEL CONFIGURATION MODAL FORM -->
+        <div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title">Panel Configuration</h4>
+                    </div>
+                    <div class="modal-body">
+                        Here will be a configuration form
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Save changes
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <!-- end: SPANEL CONFIGURATION MODAL FORM -->
+        <div class="container">
+            <!-- start: PAGE HEADER -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- start: PAGE TITLE & BREADCRUMB -->
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="clip-pencil"></i>
+                            <a href="#">
+                                商品
+                            </a>
+                        </li>
+                        <li class="active">
+                            编辑商品
+                        </li>
+                    </ol>
+                    <div class="page-header">
+                        <h1>编辑商品</h1>
+                    </div>
+                    <!-- end: PAGE TITLE & BREADCRUMB -->
+                </div>
+            </div>
+            <!-- end: PAGE HEADER -->
+            <!-- start: PAGE CONTENT -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <form role="form" action="/item/add" enctype="multipart/form-data" class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="form-field-1">
+                                商品名称
+                            </label>
+                            <div class="col-sm-9">
+                                <input name="name" type="text" id="form-field-1" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="form-field-2">
+                                商品分类
+                            </label>
+                            <div class="col-sm-9">
+                                <input name="type" type="text" id="form-field-2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">
+                                参考价格
+                            </label>
+                            <div class="col-sm-9">
+                                <input name="price" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">
+                                排序
+                            </label>
+                            <div class="col-sm-9">
+                                <input name="order" type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">
+                                商品图
+                            </label>
+                            <div class="col-sm-9">
+                                <input name="itemPic" type="file" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">
+                                轮播图
+                            </label>
+                            <div class="col-sm-9">
+                                <input name="showPicList" type="file" multiple="multiple" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">
+                                商品描述
+                            </label>
+                            <div class="col-sm-9">
+                                    <textarea name="desc" id="form-field-22" class="form-control"
+                                              style="margin: 0px -11px 0px 0px; height: 78px; width: 718px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">
+                                详情图
+                            </label>
+                            <div class="col-sm-9">
+                                <input name="descPicList" type="file" multiple="multiple" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2 col-sm-offset-8">
+                                <button type="submit" class="btn btn-success finish-step btn-block">
+                                    提交 <i class="fa fa-arrow-circle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end: PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- end: PAGE -->
+
+</div>
+<div th:replace="fragments::footer" class="footer clearfix">
+    <div class="footer-inner">
+
+    </div>
+    <div class="footer-items">
+        <span class="go-top"><i class="clip-chevron-up"></i></span>
+    </div>
+
+</div>
+</body>
+<div th:replace="fragments::common_js">
+    <!-- start: MAIN JAVASCRIPTS -->
+    <!--[if gte IE 9]><!-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <![endif]-->
+    <!--<![endif]-->
+
+    <script src="../../static/assets/plugins/respond.min.js"></script>
+    <script src="../../static/assets/plugins/excanvas.min.js"></script>
+    <script type="text/javascript" src="../../static/assets/plugins/Jquery/jquery-3.3.1.min.js"></script>
+    <script src="../../static/assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="../../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../static/assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script src="../../static/assets/plugins/blockUI/jquery.blockUI.js"></script>
+    <script src="../../static/assets/plugins/iCheck/jquery.icheck.min.js"></script>
+    <script src="../../static/assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
+    <script src="../../static/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+    <script src="../../static/assets/plugins/less/less-1.5.0.min.js"></script>
+    <script src="../../static/assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+    <script src="../../static/assets/plugins/bootstrap-colorpalette/js/bootstrap-colorpalette.js"></script>
+    <script src="../../static/assets/js/main.js"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+    <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <script src="../../static/assets/plugins/jquery-inputlimiter/jquery.inputlimiter.1.3.1.min.js"></script>
+    <script src="../../static/assets/plugins/autosize/jquery.autosize.min.js"></script>
+    <script src="../../static/assets/plugins/select2/select2.min.js"></script>
+    <script src="../../static/assets/plugins/jquery.maskedinput/src/jquery.maskedinput.js"></script>
+    <script src="../../static/assets/plugins/jquery-maskmoney/jquery.maskMoney.js"></script>
+    <script src="../../static/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../../static/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="../../static/assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+    <script src="../../static/assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../static/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script src="../../static/assets/plugins/bootstrap-colorpicker/js/commits.js"></script>
+    <script src="../../static/assets/plugins/jQuery-Tags-Input/jquery.tagsinput.js"></script>
+    <script src="../../static/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+    <script src="../../static/assets/plugins/summernote/build/summernote.min.js"></script>
+    <script src="../../static/assets/plugins/ckeditor/ckeditor.js"></script>
+    <script src="../../static/assets/plugins/ckeditor/adapters/jquery.js"></script>
+    <script src="../../static/assets/js/form-elements.js"></script>
+
+    <script src="../../static/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <script>
+        jQuery(document).ready(function () {
+            Main.init();
+            FormElements.init();
+        });
+    </script>
+
+</div>
 </html>

@@ -1,0 +1,267 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:fragment="common_js">
+    <!-- start: MAIN JAVASCRIPTS -->
+
+    <!--[if gte IE 9]><!-->
+    <!--<![endif]-->
+    <script type="text/javascript" th:src="@{/static/assets/plugins/Jquery/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/respond.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/excanvas.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/blockUI/jquery.blockUI.js}"></script>
+    <script th:src="@{/static/assets/plugins/iCheck/jquery.icheck.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js}"></script>
+    <script th:src="@{/static/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js}"></script>
+    <script th:src="@{/static/assets/plugins/less/less-1.5.0.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/jquery-cookie/jquery.cookie.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-colorpalette/js/bootstrap-colorpalette.js}"></script>
+    <script th:src="@{/static/assets/js/main.js}"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+
+
+    <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <script th:src="@{/static/assets/plugins/jquery-inputlimiter/jquery.inputlimiter.1.3.1.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/autosize/jquery.autosize.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/select2/select2.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/jquery.maskedinput/src/jquery.maskedinput.js}"></script>
+    <script th:src="@{/static/assets/plugins/jquery-maskmoney/jquery.maskMoney.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-daterangepicker/moment.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-daterangepicker/daterangepicker.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-colorpicker/js/commits.js}"></script>
+    <script th:src="@{/static/assets/plugins/jQuery-Tags-Input/jquery.tagsinput.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/summernote/build/summernote.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/ckeditor/ckeditor.js}"></script>
+    <script th:src="@{/static/assets/plugins/ckeditor/adapters/jquery.js}"></script>
+    <script th:src="@{/static/assets/js/form-elements.js}"></script>
+    <script th:src="@{/static/assets/plugins/bootstrap-paginator/src/bootstrap-paginator.js}"></script>
+    <script th:src="@{/static/assets/plugins/jquery.pulsate/jquery.pulsate.min.js}"></script>
+    <script th:src="@{/static/assets/plugins/gritter/js/jquery.gritter.min.js}"></script>
+    <script th:src="@{/static/assets/js/ui-elements.js}"></script>
+    <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+
+
+
+    <script>
+        jQuery(document).ready(function () {
+            Main.init();
+            FormElements.init();
+        });
+
+
+
+    </script>
+    <script>
+        var level1menuId = "[[${menuSelected1}]]";
+        var level2menuId = "[[${menuSelected2}]]";
+        $(".open").each(function () {
+            $(this).removeClass('active open');
+        });
+
+        $('#' + level1menuId).click();
+        $('#' + level1menuId).addClass("active open");
+        if ($('#' + level2menuId)) {
+            $('#' + level2menuId).addClass('active open');
+        }
+    </script>
+
+</div>
+
+<div th:fragment="common_css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <!-- end: META -->
+    <!-- start: MAIN CSS -->
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/font-awesome/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/fonts/style.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/css/main.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/css/main-responsive.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/iCheck/skins/all.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css}">
+    <link rel="stylesheet" id="skin_color" th:href="@{/static/assets/css/theme_light.css}">
+    <link rel="stylesheet" type="text/css" media="print" th:href="@{/static/assets/css/print.css}"/>
+    <!-- end: MAIN CSS -->
+
+    <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/select2/select2.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/datepicker/css/datepicker.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/jQuery-Tags-Input/jquery.tagsinput.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/summernote/build/summernote.css}">
+    <link rel="stylesheet" th:href="@{/static/assets/plugins/gritter/css/jquery.gritter.css}">
+
+    <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+</div>
+
+<div th:fragment="footer" class="footer clearfix">
+    <div class="footer-inner">
+        XXXXXX
+    </div>
+    <div class="footer-items">
+        <span class="go-top"><i class="clip-chevron-up"></i></span>
+    </div>
+</div>
+
+
+<div th:fragment="header" class="navbar navbar-inverse navbar-fixed-top">
+    <!-- start: TOP NAVIGATION CONTAINER -->
+    <div class="container">
+        <div class="navbar-header">
+            <!-- start: RESPONSIVE MENU TOGGLER -->
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="clip-list-2"></span>
+            </button>
+            <!-- end: RESPONSIVE MENU TOGGLER -->
+            <!-- start: LOGO -->
+            <a class="navbar-brand" href="#">
+                HAPPY-HOME
+            </a>
+            <!-- end: LOGO -->
+        </div>
+        <div class="navbar-tools">
+            <!-- start: TOP NAVIGATION MENU -->
+            <ul class="nav navbar-right">
+                <!-- start: USER DROPDOWN -->
+                <li class="dropdown current-user">
+                    <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true"
+                       href="#">
+                        <img src="../../static/assets/images/avatar-1-small.jpg" class="circle-img" alt="">
+                        <span class="username" th:text="XXXXXX">leaderName</span>
+                        <i class="clip-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a th:href="@{/leader/profile.do}" href="profile.html">
+                                <i class="clip-user-2"></i>
+                                &nbsp;个人信息
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a th:href="@{/leader/logout.do}" href="#">
+                                <i class="clip-exit"></i>
+                                &nbsp;登出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- end: USER DROPDOWN -->
+            </ul>
+            <!-- end: TOP NAVIGATION MENU -->
+        </div>
+    </div>
+    <!-- end: TOP NAVIGATION CONTAINER -->
+</div>
+
+<div th:fragment="left" class="navbar-content">
+
+    <!-- start: SIDEBAR -->
+    <div class="main-navigation navbar-collapse collapse">
+        <!-- start: MAIN MENU TOGGLER BUTTON -->
+        <div class="navigation-toggler">
+            <i class="clip-chevron-left"></i>
+            <i class="clip-chevron-right"></i>
+        </div>
+        <!-- end: MAIN MENU TOGGLER BUTTON -->
+        <!-- start: MAIN NAVIGATION MENU -->
+        <ul class="main-navigation-menu">
+            <li class="active open" id="index" >
+                <a href="index.html" th:href="@{'/leader/index.do'}"><i class="clip-home-3"></i>
+                    <span class="title"> 首页 </span><span class="selected"></span>
+                </a>
+            </li>
+            <li id="profile">
+                <a href="profile.html" th:href="${'/leader/profile.do'}"><i class="clip-screen"></i>
+                    <span class="title"> 个人信息 </span>
+                    <span class="selected"></span>
+                </a>
+            </li>
+            <li id="peopleManage">
+                <a href="javascript:void(0)"><i class="clip-cog-2"></i>
+                    <span class="title"> 人员管理 </span><i class="icon-arrow"></i>
+                    <span class="selected"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li id="teacherManage">
+                        <a th:href="${'/leader/teacherManage.do'}" href="ui_elements.html">
+                            <span class="title"> 教师管理 </span>
+                        </a>
+                    </li>
+                    <li id="studentManage">
+                        <a th:href="${'/leader/studentManage.do'}" href="ui_buttons.html">
+                            <span class="title"> 学生管理 </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!--<li>-->
+            <!--<a href="javascript:void(0)"><i class="clip-grid-6"></i>-->
+            <!--<span class="title"> 成果管理 </span><i class="icon-arrow"></i>-->
+            <!--<span class="selected"></span>-->
+            <!--</a>-->
+            <!--<ul class="sub-menu">-->
+            <!--<li>-->
+            <!--<a th:href="${'/leader/publishAchievement.do'}" href="table_static.html">-->
+            <!--<span class="title">发布竞赛成果信息</span>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a th:href="${'/leader/achievementList.do'}" href="table_static.html">-->
+            <!--<span class="title">成果查询</span>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <li id="raceManage">
+                <a href="javascript:void(0)"><i class="clip-pencil"></i>
+                    <span class="title"> 竞赛管理 </span><i class="icon-arrow"></i>
+                    <span class="selected"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li id="addRaceInfo">
+                        <a th:href="${'/leader/toAddRaceInfo.do'}" href="form_elements.html">
+                            <span class="title">添加赛事信息</span>
+                        </a>
+                    </li>
+                    <li id="raceInfoList">
+                        <a th:href="${'/leader/raceInfoList.do'}" href="form_wizard.html">
+                            <span class="title">查看赛事信息</span>
+                        </a>
+                    </li>
+                    <li id="raceList">
+                        <a th:href="${'/leader/raceList.do'}" href="form_validation.html">
+                            <span class="title">查看竞赛列表</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li id="projectList">
+                <a th:href="${'/leader/projectList.do'}" href="javascript:void(0)"><i class="clip-file"></i>
+                    <span class="title">项目查询</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
+        </ul>
+        <!-- end: MAIN NAVIGATION MENU -->
+    </div>
+    <!-- end: SIDEBAR -->
+
+</div>
+</html>

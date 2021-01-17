@@ -27,6 +27,10 @@ public class Item implements Serializable {
      */
     private String showPic;
     /**
+     * 商品展示用pic
+     */
+    private String itemPic;
+    /**
      * 详细图片,用在描述后面
      */
     private String descPic;
@@ -110,5 +114,13 @@ public class Item implements Serializable {
 
     public void setDescPic(String descPic) {
         this.descPic = descPic;
+    }
+
+    public String getItemPic() {
+        return itemPic;
+    }
+
+    public void setItemPic(String itemPic) {
+        this.itemPic = itemPic;
     }
 }

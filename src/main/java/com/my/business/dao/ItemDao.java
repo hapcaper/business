@@ -17,7 +17,7 @@ import java.util.List;
 @Mapper
 public interface ItemDao {
 
-    List<Object> findById();
+    Item findById(Long id);
 
     List<Object> findAll();
 

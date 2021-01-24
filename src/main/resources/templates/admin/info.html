@@ -133,11 +133,11 @@
                             </a>
                         </li>
                         <li class="active">
-                            商品列表
+                            编辑商品
                         </li>
                     </ol>
                     <div class="page-header">
-                        <h1>所有商品</h1>
+                        <h1>编辑商品</h1>
                     </div>
                     <!-- end: PAGE TITLE & BREADCRUMB -->
                 </div>
@@ -145,23 +145,8 @@
             <!-- end: PAGE HEADER -->
             <!-- start: PAGE CONTENT -->
             <div class="row">
-                <div th:each="item : ${list}" class="col-md-3 col-sm-4 gallery-img">
-                    <div class="wrap-image">
-                        <a class="group1" th:href="@{~/item/info(id=${item.id})}" href="../../static/assets/images/image01.jpg" th:title="${item.name}" title="Clip-One Business Card">
-                            <img th:src="${item.itemPic}" src="../../static/assets/images/image01.jpg" alt="" class="img-responsive">
-                        </a>
-                        <div class="tools tools-bottom">
-                            <a href="#">
-                                <i class="clip-link-4"></i>
-                            </a>
-                            <a href="#">
-                                <i class="clip-pencil-3 "></i>
-                            </a>
-                            <a href="#">
-                                <i class="clip-close-2"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="col-md-12">
+
                 </div>
             </div>
             <!-- end: PAGE CONTENT-->

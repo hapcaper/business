@@ -1,6 +1,7 @@
 package com.my.business.po;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Description:
@@ -26,6 +27,7 @@ public class Item implements Serializable {
      * 轮播图
      */
     private String showPic;
+    private List<String> showPicList;
     /**
      * 商品展示用pic
      */
@@ -34,6 +36,7 @@ public class Item implements Serializable {
      * 详细图片,用在描述后面
      */
     private String descPic;
+    private List<String> descPicList;
     /**
      * 参考价格
      */
@@ -122,5 +125,21 @@ public class Item implements Serializable {
 
     public void setItemPic(String itemPic) {
         this.itemPic = itemPic;
+    }
+
+    public List<String> getShowPicList() {
+        return showPicList;
+    }
+
+    public void setShowPicList(List<String> showPicList) {
+        this.showPicList = showPicList;
+    }
+
+    public List<String> getDescPicList() {
+        return descPicList;
+    }
+
+    public void setDescPicList(List<String> descPicList) {
+        this.descPicList = descPicList;
     }
 }

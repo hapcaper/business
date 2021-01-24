@@ -182,80 +182,21 @@
         <!-- end: MAIN MENU TOGGLER BUTTON -->
         <!-- start: MAIN NAVIGATION MENU -->
         <ul class="main-navigation-menu">
-            <li class="active open" id="index" >
-                <a href="index.html" th:href="@{'/leader/index.do'}"><i class="clip-home-3"></i>
-                    <span class="title"> 首页 </span><span class="selected"></span>
+            <li id="toAdd" >
+                <a href="#" th:href="@{~/item/toAdd}"><i class="clip-home-3"></i>
+                    <span class="title"> 添加商品 </span><span class="selected"></span>
                 </a>
             </li>
-            <li id="profile">
-                <a href="profile.html" th:href="${'/leader/profile.do'}"><i class="clip-screen"></i>
-                    <span class="title"> 个人信息 </span>
+
+            <li id="list">
+                <a href="#" th:href="@{~/item/list}"><i class="clip-screen"></i>
+                    <span class="title"> 所有商品 </span>
                     <span class="selected"></span>
                 </a>
             </li>
-            <li id="peopleManage">
-                <a href="javascript:void(0)"><i class="clip-cog-2"></i>
-                    <span class="title"> 人员管理 </span><i class="icon-arrow"></i>
-                    <span class="selected"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li id="teacherManage">
-                        <a th:href="${'/leader/teacherManage.do'}" href="ui_elements.html">
-                            <span class="title"> 教师管理 </span>
-                        </a>
-                    </li>
-                    <li id="studentManage">
-                        <a th:href="${'/leader/studentManage.do'}" href="ui_buttons.html">
-                            <span class="title"> 学生管理 </span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <!--<li>-->
-            <!--<a href="javascript:void(0)"><i class="clip-grid-6"></i>-->
-            <!--<span class="title"> 成果管理 </span><i class="icon-arrow"></i>-->
-            <!--<span class="selected"></span>-->
-            <!--</a>-->
-            <!--<ul class="sub-menu">-->
-            <!--<li>-->
-            <!--<a th:href="${'/leader/publishAchievement.do'}" href="table_static.html">-->
-            <!--<span class="title">发布竞赛成果信息</span>-->
-            <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<a th:href="${'/leader/achievementList.do'}" href="table_static.html">-->
-            <!--<span class="title">成果查询</span>-->
-            <!--</a>-->
-            <!--</li>-->
-            <!--</ul>-->
-            <!--</li>-->
-            <li id="raceManage">
-                <a href="javascript:void(0)"><i class="clip-pencil"></i>
-                    <span class="title"> 竞赛管理 </span><i class="icon-arrow"></i>
-                    <span class="selected"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li id="addRaceInfo">
-                        <a th:href="${'/leader/toAddRaceInfo.do'}" href="form_elements.html">
-                            <span class="title">添加赛事信息</span>
-                        </a>
-                    </li>
-                    <li id="raceInfoList">
-                        <a th:href="${'/leader/raceInfoList.do'}" href="form_wizard.html">
-                            <span class="title">查看赛事信息</span>
-                        </a>
-                    </li>
-                    <li id="raceList">
-                        <a th:href="${'/leader/raceList.do'}" href="form_validation.html">
-                            <span class="title">查看竞赛列表</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li id="projectList">
-                <a th:href="${'/leader/projectList.do'}" href="javascript:void(0)"><i class="clip-file"></i>
-                    <span class="title">项目查询</span>
-                    <span class="selected"></span>
+            <li th:each="t : ${session.allType}">
+                <a href="#" th:href="@{~/item/list(type=${t})}"><i class="clip-screen"></i>
+                    <span class="title" th:text="${t}">多类型商品</span>
                 </a>
             </li>
         </ul>

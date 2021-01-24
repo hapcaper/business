@@ -1,5 +1,6 @@
 package com.my.business.controller;
 
+import com.my.business.dao.ItemDao;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,7 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Description:
@@ -21,6 +24,8 @@ public class LoginController {
     private String name;
     @Value("${login.password}")
     private String pswd;
+    @Resource
+    private ItemDao itemDao;
 
 
     @GetMapping("/toLogin")
@@ -30,7 +35,9 @@ public class LoginController {
     @PostMapping("/login")
     public String login(HttpSession session, Model model, @RequestParam("userName") String userName, @RequestParam("password") String password) {
         if (name.equals(userName) && pswd.equals(password)) {
+            List<String> allType = itemDao.findAllType();
             session.setAttribute("loginId", "abcd");
+            session.setAttribute("allType", allType);
             return "redirect:/item/list";
         } else {
             model.addAttribute("msg", "账号或密码错误");

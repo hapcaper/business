@@ -44,4 +44,10 @@
     <select id="findAll" resultMap="BaseResultMap">
         select * from item
     </select>
+    <select id="findAllType" resultType="java.lang.String">
+        select type from item group by type
+    </select>
+    <select id="findByType" resultType="com.my.business.po.Item" parameterType="java.lang.String">
+        select * from item where type = #{type}
+    </select>
 </mapper>

@@ -17,9 +17,13 @@ import java.util.List;
 @Mapper
 public interface ItemDao {
 
-    Item findById(Long id);
+    Item findById(@Param("id") Long id);
 
-    List<Object> findAll();
+    List<Item> findAll();
 
     void insert(@Param("pojo") Item item);
+
+    List<String> findAllType();
+
+    List<Item> findByType(@Param("type") String type);
 }

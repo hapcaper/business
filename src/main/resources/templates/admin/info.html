@@ -15,12 +15,15 @@
         <link rel="stylesheet" href="../../static/assets/plugins/iCheck/skins/all.css">
         <link rel="stylesheet" href="../../static/assets/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css">
         <link rel="stylesheet" href="../../static/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
-        <link rel="stylesheet" href="../../static/assets/css/theme_light.css" type="text/css" id="skin_color">
+        <link rel="stylesheet" href="../../static/assets/css/theme_light.css" type="text/css" >
         <link rel="stylesheet" href="../../static/assets/css/print.css" type="text/css" media="print"/>
 
-        <!--[if IE 7]>
-        <link rel="stylesheet" href="../../static/assets/plugins/font-awesome/css/font-awesome-ie7.min.css">
-        <![endif]-->
+        <link rel="stylesheet" href="../../static/assets/plugins/animate.css/animate.min.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/revolution_slider/rs-plugin/css/settings.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/flex-slider/flexslider.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/colorbox/example2/colorbox.css">
+
+
         <!-- end: MAIN CSS -->
 
         <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
@@ -32,8 +35,25 @@
         <link rel="stylesheet" href="../../static/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
         <link rel="stylesheet" href="../../static/assets/plugins/jQuery-Tags-Input/jquery.tagsinput.css">
         <link rel="stylesheet" href="../../static/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css">
-        <link rel="stylesheet" href="../../static/assets/plugins/summernote/build/summernote.css">
+<!--        <link rel="stylesheet" href="../../static/assets/plugins/summernote/build/summernote.css">-->
         <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+
+
+
+
+        <link href="../../static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="../../static/assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../static/assets/fonts/style.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/animate.css/animate.min.css">
+        <link rel="stylesheet" href="../../static/assets/css/main.css">
+        <link rel="stylesheet" href="../../static/assets/css/main-responsive.css">
+        <link rel="stylesheet" href="../../static/assets/css/theme_blue.css" type="text/css" id="skin_color">
+        <!-- end: MAIN CSS -->
+        <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+        <link rel="stylesheet" href="../../static/assets/plugins/revolution_slider/rs-plugin/css/settings.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/flex-slider/flexslider.css">
+        <link rel="stylesheet" href="../../static/assets/plugins/colorbox/example2/colorbox.css">
+
     </div>
 </head>
 
@@ -50,7 +70,7 @@
             <!-- end: RESPONSIVE MENU TOGGLER -->
             <!-- start: LOGO -->
             <a class="navbar-brand" href="index.html">
-                竞赛管理
+                HAPPY-HOME
             </a>
             <!-- end: LOGO -->
         </div>
@@ -145,9 +165,88 @@
             <!-- end: PAGE HEADER -->
             <!-- start: PAGE CONTENT -->
             <div class="row">
-                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="flexslider" data-plugin-options="{&quot;controlNav&quot;:false,&quot;sync&quot;: &quot;#carousel&quot;}">
 
+
+                                <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                    <ul class="slides" style="width: 1000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                                    <li class="flex-active-slide" style="width: 555px; float: left; display: block;">
+                                        <a class="group1 cboxElement" href="../../static/assets/images/image01.jpg" title="Caption here">
+                                            <img src="../../static/assets/images/image01.jpg" draggable="false">
+                                            <span class="image-overlay" style="opacity: 0;"> <i class="clip-expand circle-icon circle-main-color" style="transform: rotate(0deg);"></i> </span>
+                                        </a>
+                                    </li>
+                                    <li style="width: 555px; float: left; display: block;">
+                                        <a class="group1 cboxElement" href="../../static/assets/images/image02.jpg" title="Caption here">
+                                            <img src="../../static/assets/images/image02.jpg" draggable="false">
+                                            <span class="image-overlay"> <i class="clip-expand circle-icon circle-main-color"></i> </span>
+                                        </a>
+                                    </li>
+                                    <li style="width: 555px; float: left; display: block;">
+                                        <a class="group1 cboxElement" href="../../static/assets/images/image03.jpg" title="Caption here">
+                                            <img src="../../static/assets/images/image03.jpg" draggable="false">
+                                            <span class="image-overlay"> <i class="clip-expand circle-icon circle-main-color"></i> </span>
+                                        </a>
+                                    </li>
+                                    <li style="width: 555px; float: left; display: block;">
+                                        <a class="group1 cboxElement" href="../../static/assets/images/image04.jpg" title="Caption here">
+                                            <img src="../../static/assets/images/image04.jpg" draggable="false">
+                                            <span class="image-overlay"> <i class="clip-expand circle-icon circle-main-color"></i> </span>
+                                        </a>
+                                    </li>
+                                    <li style="width: 555px; float: left; display: block;">
+                                        <a class="group1 cboxElement" href="../../static/assets/images/image05.jpg" title="Caption here">
+                                            <img src="../../static/assets/images/image05.jpg" draggable="false">
+                                            <span class="image-overlay"> <i class="clip-expand circle-icon circle-main-color"></i> </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                            <div id="carousel" class="flexslider animate-group" data-plugin-options="{&quot;itemWidth&quot;: 120, &quot;itemMargin&quot;: 5}">
+
+                                <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 1000%; transition-duration: 0s; transform: translate3d(-65px, 0px, 0px);">
+                                    <li class="" style="width: 120px; float: left; display: block;">
+                                        <img src="../../static/assets/images/image01.jpg" class="animate" data-animation-options="{&quot;animation&quot;:&quot;fadeIn&quot;, &quot;duration&quot;:&quot;600&quot;}" draggable="false" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: fadeIn;">
+                                    </li>
+                                    <li style="width: 120px; float: left; display: block;">
+                                        <img src="../../static/assets/images/image02.jpg" class="animate" data-animation-options="{&quot;animation&quot;:&quot;fadeIn&quot;, &quot;duration&quot;:&quot;600&quot;}" draggable="false" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: fadeIn;">
+                                    </li>
+                                    <li style="width: 120px; float: left; display: block;">
+                                        <img src="../../static/assets/images/image03.jpg" class="animate" data-animation-options="{&quot;animation&quot;:&quot;fadeIn&quot;, &quot;duration&quot;:&quot;600&quot;}" draggable="false" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: fadeIn;">
+                                    </li>
+                                    <li style="width: 120px; float: left; display: block;" class="">
+                                        <img src="../../static/assets/images/image04.jpg" class="animate" data-animation-options="{&quot;animation&quot;:&quot;fadeIn&quot;, &quot;duration&quot;:&quot;600&quot;}" draggable="false" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: fadeIn;">
+                                    </li>
+                                    <li style="width: 120px; float: left; display: block;" class="flex-active-slide">
+                                        <img src="../../static/assets/images/image05.jpg" class="animate" data-animation-options="{&quot;animation&quot;:&quot;fadeIn&quot;, &quot;duration&quot;:&quot;600&quot;}" draggable="false" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: fadeIn;">
+                                    </li>
+                                </ul></div><ul class="flex-direction-nav"><li><a class="flex-prev" href="#" tabindex="-1"></a></li><li><a class="flex-next flex-disabled" href="#" tabindex="-1"></a></li></ul></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="section-content">
+                                <h2 th:text="${item.name}">商品名称</h2>
+                                <hr class="fade-right">
+                                <p th:text="${item.desc}">
+                                    商品描述
+                                </p>
+                                <hr class="fade-right">
+                                <label>price : </label>
+                                <a href="#" disabled="disabled" class="btn btn-default" th:text="${item.price}">XXX $ </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="progress progress-striped active progress-sm">
+                    <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress-bar progress-bar-success step-bar">
+                        <span class="sr-only"> 0% Complete (success)</span>
+                    </div>
                 </div>
+                <h2><i class="fa fa-pencil-square teal"></i> ORTHER IMG DETAIL</h2>
+                <img th:each="descPic : ${item.descPicList}" style="margin: 20px;height: 800px" src="../../static/assets/images/image03.jpg" th:src="${descPic}">
             </div>
             <!-- end: PAGE CONTENT-->
         </div>
@@ -167,11 +266,7 @@
 </body>
 <div th:replace="fragments::common_js">
     <!-- start: MAIN JAVASCRIPTS -->
-    <!--[if gte IE 9]><!-->
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <![endif]-->
-    <!--<![endif]-->
+<!--    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
 
     <script src="../../static/assets/plugins/respond.min.js"></script>
     <script src="../../static/assets/plugins/excanvas.min.js"></script>
@@ -202,18 +297,52 @@
     <script src="../../static/assets/plugins/bootstrap-colorpicker/js/commits.js"></script>
     <script src="../../static/assets/plugins/jQuery-Tags-Input/jquery.tagsinput.js"></script>
     <script src="../../static/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
-    <script src="../../static/assets/plugins/summernote/build/summernote.min.js"></script>
+<!--    <script src="../../static/assets/plugins/summernote/build/summernote.min.js"></script>-->
     <script src="../../static/assets/plugins/ckeditor/ckeditor.js"></script>
     <script src="../../static/assets/plugins/ckeditor/adapters/jquery.js"></script>
     <script src="../../static/assets/js/form-elements.js"></script>
 
-    <script src="../../static/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<!--    <script src="../../static/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>-->
+
+
+<!--    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+    <script src="../../static/assets/plugins/jquery.transit/jquery.transit.js"></script>
+    <script src="../../static/assets/plugins/hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"></script>
+    <script src="../../static/assets/plugins/jquery.appear/jquery.appear.js"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+    <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <script src="../../static/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="../../static/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="../../static/assets/plugins/flex-slider/jquery.flexslider.js"></script>
+    <script src="../../static/assets/plugins/stellar.js/jquery.stellar.min.js"></script>
+    <script src="../../static/assets/plugins/colorbox/jquery.colorbox-min.js"></script>
+    <script src="../../static/assets/js/index.js"></script>
+
+
+    <script src="../../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../static/assets/plugins/jquery.transit/jquery.transit.js"></script>
+    <script src="../../static/assets/plugins/hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"></script>
+    <script src="../../static/assets/plugins/jquery.appear/jquery.appear.js"></script>
+    <script src="../../static/assets/plugins/blockUI/jquery.blockUI.js"></script>
+    <script src="../../static/assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+    <script src="../../static/assets/js/main.js"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+    <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <script src="../../static/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="../../static/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="../../static/assets/plugins/flex-slider/jquery.flexslider.js"></script>
+    <script src="../../static/assets/plugins/stellar.js/jquery.stellar.min.js"></script>
+    <script src="../../static/assets/plugins/colorbox/jquery.colorbox-min.js"></script>
+    <script src="../../static/assets/js/index.js"></script>
+    <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
 
     <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
     <script>
         jQuery(document).ready(function () {
             Main.init();
             FormElements.init();
+            Index.init();
+            $.stellar();
         });
     </script>
 

@@ -39,15 +39,15 @@
         </trim>
     </insert>
     <select id="findById" resultMap="BaseResultMap" parameterType="Long">
-        select * from item where id = #{id}
+        select * from item where id = #{id} order by `order`
     </select>
     <select id="findAll" resultMap="BaseResultMap">
-        select * from item
+        select * from item order by `order`
     </select>
     <select id="findAllType" resultType="java.lang.String">
         select type from item group by type
     </select>
-    <select id="findByType" resultType="com.my.business.po.Item" parameterType="java.lang.String">
-        select * from item where type = #{type}
+    <select id="findByType" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select * from item where type = #{type} order by `order`
     </select>
 </mapper>

@@ -50,7 +50,7 @@
             <!-- end: RESPONSIVE MENU TOGGLER -->
             <!-- start: LOGO -->
             <a class="navbar-brand" href="index.html">
-                竞赛管理
+                HAPPY-HOME
             </a>
             <!-- end: LOGO -->
         </div>
@@ -137,7 +137,7 @@
                         </li>
                     </ol>
                     <div class="page-header">
-                        <h1>所有商品</h1>
+                        <h1>商品列表</h1>
                     </div>
                     <!-- end: PAGE TITLE & BREADCRUMB -->
                 </div>
@@ -146,6 +146,7 @@
             <!-- start: PAGE CONTENT -->
             <div class="row">
                 <div th:each="item : ${list}" class="col-md-3 col-sm-4 gallery-img">
+                    <label th:text="${item.name}">商品名称</label>
                     <div class="wrap-image">
                         <a class="group1" th:href="@{~/item/info(id=${item.id})}" href="../../static/assets/images/image01.jpg" th:title="${item.name}" title="Clip-One Business Card">
                             <img th:src="${item.itemPic}" src="../../static/assets/images/image01.jpg" alt="" class="img-responsive">

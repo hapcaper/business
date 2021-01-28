@@ -44,4 +44,15 @@ public class LoginController {
             return "login";
         }
     }
+
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.removeAttribute("loginId");
+        return "redirect:/toLogin";
+    }
+
+    @GetMapping("/")
+    public String index() {
+        return "redirect:/public/list";
+    }
 }

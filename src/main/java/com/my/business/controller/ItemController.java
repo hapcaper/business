@@ -102,6 +102,7 @@ public class ItemController {
         List<Item> list;
         if (StringUtils.isEmpty(type)) {
             list = itemDao.findAll();
+            model.addAttribute("type", type);
         } else {
             list = itemDao.findByType(type);
         }
@@ -117,6 +118,17 @@ public class ItemController {
         item.setShowPicList(Arrays.asList(item.getShowPic().split(",")));
         model.addAttribute("item", item);
         return "admin/info";
+    }
+
+    @GetMapping("/delete")
+    public String delete(Model model, Long id, String type) {
+        itemDao.delete(id);
+        if (!StringUtils.isEmpty(type)) {
+            model.addAttribute("typ", type);
+            return "redirect:/item/list?type=" + type;
+        } else {
+            return "redirect:/item/list";
+        }
     }
 
 

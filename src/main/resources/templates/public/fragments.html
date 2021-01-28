@@ -139,22 +139,22 @@
             <!-- start: TOP NAVIGATION MENU -->
             <ul class="nav navbar-right">
                 <!-- start: USER DROPDOWN -->
-                <li class="dropdown current-user">
-                    <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true"
-                       href="#">
-                        <img src="../../static/assets/images/avatar-1-small.jpg" class="circle-img" alt="">
-                        <span class="username" th:text="SYQ">userName</span>
-                        <i class="clip-chevron-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a th:href="@{/logout}" href="#">
-                                <i class="clip-exit"></i>
-                                &nbsp;登出
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+<!--                <li class="dropdown current-user">-->
+<!--                    <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true"-->
+<!--                       href="#">-->
+<!--                        <img src="../../static/assets/images/avatar-1-small.jpg" class="circle-img" alt="">-->
+<!--                        <span class="username" th:text="SYQ">userName</span>-->
+<!--                        <i class="clip-chevron-down"></i>-->
+<!--                    </a>-->
+<!--                    <ul class="dropdown-menu">-->
+<!--                        <li>-->
+<!--                            <a th:href="@{/logout}" href="#">-->
+<!--                                <i class="clip-exit"></i>-->
+<!--                                &nbsp;登出-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
                 <!-- end: USER DROPDOWN -->
             </ul>
             <!-- end: TOP NAVIGATION MENU -->
@@ -175,20 +175,14 @@
         <!-- end: MAIN MENU TOGGLER BUTTON -->
         <!-- start: MAIN NAVIGATION MENU -->
         <ul class="main-navigation-menu">
-            <li id="toAdd" >
-                <a href="#" th:href="@{~/item/toAdd}"><i class="clip-home-3"></i>
-                    <span class="title"> 添加商品 </span><span class="selected"></span>
-                </a>
-            </li>
-
             <li id="list">
-                <a href="#" th:href="@{~/item/list}"><i class="clip-screen"></i>
+                <a href="#" th:href="@{~/public/list}"><i class="clip-screen"></i>
                     <span class="title"> 所有商品 </span>
                     <span class="selected"></span>
                 </a>
             </li>
             <li th:each="t : ${session.allType}">
-                <a href="#" th:href="@{~/item/list(type=${t})}"><i class="clip-screen"></i>
+                <a href="#" th:href="@{~/public/list(type=${t})}"><i class="clip-screen"></i>
                     <span class="title" th:text="${t}">多类型商品</span>
                 </a>
             </li>

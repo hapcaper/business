@@ -6,7 +6,7 @@
 <head>
     <title>Clip-One - Responsive Admin Template</title>
     <!-- start: META -->
-    <div th:replace="fragments::common_css">
+    <div th:replace="public/fragments::common_css">
         <link rel="stylesheet" href="../../static/assets/plugins/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../static/assets/plugins/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="../../static/assets/fonts/style.css">
@@ -39,7 +39,7 @@
 
 <body>
 <!-- start: HEADER -->
-<div th:replace="fragments::header" class="navbar navbar-inverse navbar-fixed-top">
+<div th:replace="public/fragments::header" class="navbar navbar-inverse navbar-fixed-top">
     <!-- start: TOP NAVIGATION CONTAINER -->
     <div class="container">
         <div class="navbar-header">
@@ -89,7 +89,7 @@
 </div>
 
 <div class="main-container">
-    <div th:replace="fragments::left" class="navbar-content"></div>
+    <div th:replace="public/fragments::left" class="navbar-content"></div>
     <!-- start: PAGE -->
     <div class="main-content">
         <!-- start: PANEL CONFIGURATION MODAL FORM -->
@@ -148,17 +148,9 @@
                 <div th:each="item : ${list}" class="col-md-3 col-sm-4 gallery-img">
                     <label th:text="${item.name}">商品名称</label>
                     <div class="wrap-image">
-                        <a class="group1" th:href="@{~/item/info(id=${item.id})}" href="../../static/assets/images/image01.jpg" th:title="${item.name}" title="Clip-One Business Card">
+                        <a class="group1" th:href="@{~/public/info(id=${item.id})}" href="../../static/assets/images/image01.jpg" th:title="${item.name}" title="Clip-One Business Card">
                             <img th:src="${item.itemPic}" src="../../static/assets/images/image01.jpg" alt="" class="img-responsive">
                         </a>
-                        <div class="tools tools-bottom">
-                            <a href="#">
-                                <i class="clip-pencil-3 "></i>
-                            </a>
-                            <a href="#" th:href="@{~/item/delete(id=${item.id},type=${item.type})}">
-                                <i class="clip-close-2"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -168,7 +160,7 @@
     <!-- end: PAGE -->
 
 </div>
-<div th:replace="fragments::footer" class="footer clearfix">
+<div th:replace="public/fragments::footer" class="footer clearfix">
     <div class="footer-inner">
 
     </div>
@@ -178,7 +170,7 @@
 
 </div>
 </body>
-<div th:replace="fragments::common_js">
+<div th:replace="public/fragments::common_js">
     <!-- start: MAIN JAVASCRIPTS -->
     <!--[if gte IE 9]><!-->
     <!--[if lt IE 9]>

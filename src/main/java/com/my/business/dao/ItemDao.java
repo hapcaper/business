@@ -26,4 +26,6 @@ public interface ItemDao {
     List<String> findAllType();
 
     List<Item> findByType(@Param("type") String type);
+
+    void delete(@Param("id") Long id);
 }
